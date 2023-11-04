@@ -3,7 +3,7 @@
 all: compile
 
 compile: rebar3
-	./rebar3 compile
+	./rebar3 get-deps compile
 
 reload: compile
 	zsh -c './reload.erl $$(foreach f (src/*.erl); basename $$f .erl; end)'
